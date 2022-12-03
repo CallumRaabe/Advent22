@@ -1,10 +1,9 @@
 def importInputFile():
     with open('input.txt') as f:
-        lines = f.read().split('\n\n')
-        return lines
+        return f.read().split('\n\n')
 
 def calculateElfTotal(string):
-    list = filter(None, string.split('\n'))
+    list = filter(None, string.split())
     numbers = [eval(i) for i in list]
     result = sum(numbers)
     return result

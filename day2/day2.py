@@ -1,10 +1,6 @@
 def importInputFile():
-    import os
-    print(os.getcwd())
     with open('input.txt') as f:
-        lines = f.read().split('\n')
-        filteredLines = list(filter(None, lines)) # make sure we aren't getting the blank line at the end of the file
-        return filteredLines
+        return f.read().strip().split('\n')
 
 def decryptIntoPointsForMoves(input):
     moves = input.split()
