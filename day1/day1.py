@@ -2,11 +2,10 @@ def importInputFile():
     with open('input.txt') as f:
         return f.read().split('\n\n')
 
-def calculateElfTotal(string):
-    list = filter(None, string.split())
+def calculateElfTotal(array):
+    list = filter(None, array.split())
     numbers = [eval(i) for i in list]
-    result = sum(numbers)
-    return result
+    return sum(numbers)
 
 def findHighestCalorieCount(array):
     print(max(array))
@@ -16,11 +15,11 @@ def findHighestThreeCounts(array):
     print(sum(topThree))
 
 
-arr = importInputFile()
+file = importInputFile()
 
 elfTotals = []
 
-for elf in arr:
+for elf in file:
     elfTotals.append(calculateElfTotal(elf))
 
 findHighestCalorieCount(elfTotals)

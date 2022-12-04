@@ -37,7 +37,7 @@ def calculateWin(input):
 
     return (input[1] + result)    
             
-def decrypeIntoMoveAndGameResult(input):
+def decryptIntoMoveAndGameResult(input):
 
     loss = 0
     draw = 3
@@ -97,6 +97,6 @@ print(sum(results)) # pt 1 answer
 newResults = []
 
 for game in file:
-    newResults.append(decrypeIntoMoveAndGameResult(game.split()))
+    newResults.append(decryptIntoMoveAndGameResult(game.split()))
 
 print(sum(newResults)) # pt 2 answer
